@@ -1,5 +1,5 @@
 let plumber = require('gulp-plumber'),
-    scss = require('gulp-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     csso = require('gulp-csso'),
     csscomb = require('gulp-csscomb'),
@@ -12,10 +12,10 @@ let plumber = require('gulp-plumber'),
 
 module.exports = function () {
     $.gulp.task('styles:dev', () => {
-        return $.gulp.src(stylesPATH.input + 'styles.scss')
+        return $.gulp.src(stylesPATH.input + 'styles.sass')
             .pipe(plumber())
             .pipe(sourcemaps.init())
-            .pipe(scss())
+            .pipe(sass())
             .pipe(autoprefixer({
                 browsers: ['last 3 version']
             }))
@@ -25,8 +25,8 @@ module.exports = function () {
             .on('end', $.browserSync.reload);
     });
     $.gulp.task('styles:build', () => {
-        return $.gulp.src(stylesPATH.input + 'styles.scss')
-            .pipe(scss())
+        return $.gulp.src(stylesPATH.input + 'styles.sass')
+            .pipe(sass())
             .pipe(autoprefixer({
                 browsers: ['last 3 version']
             }))
@@ -34,8 +34,8 @@ module.exports = function () {
             .pipe($.gulp.dest(stylesPATH.ouput))
     });
     $.gulp.task('styles:build-min', () => {
-        return $.gulp.src(stylesPATH.input + 'styles.scss')
-            .pipe(scss())
+        return $.gulp.src(stylesPATH.input + 'styles.sass')
+            .pipe(sass())
             .pipe(autoprefixer({
                 browsers: ['last 3 version']
             }))

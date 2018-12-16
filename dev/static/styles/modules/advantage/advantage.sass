@@ -1,0 +1,38 @@
+.advantages
+	display: flex
+	& > *
+		flex: 1
+		&:not(:last-child)
+			margin-right: 30px
+.advantage
+	display: flex
+	& > *
+		&:not(:last-child)
+			margin-right: 15px
+	&__icon
+		fill: $mainActionColor
+		&.icon
+			&-guarantee
+				height: 64px
+				width: 43px
+			&-support
+				@include size(50px)
+			&-blood-test
+				height: 48px
+				width: 54px
+	&__body
+		display: flex
+		flex-direction: column
+	&__title
+		margin-bottom: 4px
+	&__text
+		font-size: 14px
+		letter-spacing: 0.25px
+		color: $text-info-color
+	&__link
+		font-size: 14px
+		letter-spacing: 0.25px
+		text-decoration: underline
+		margin-top: 8px
+
+	

@@ -1,0 +1,26 @@
+.actions-prev
+	display: flex
+	& > *
+		&:not(:last-child)
+			margin-right: 30px
+			
+.action-prev
+	border-radius: 4px
+	overflow: hidden
+	width: 100%
+	&__header
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		display: flex
+		align-items: flex-end
+		height: 185px
+		padding: 20px
+	&__body
+		background-color: $white
+		padding: 15px 20px
+	&__text
+		display: flex
+		flex-direction: column
+	&__title
+		font-size: 22px

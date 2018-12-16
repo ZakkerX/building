@@ -1,0 +1,29 @@
+.location
+	$locationWidht: 175px
+	flex: 0 0 $locationWidht
+	max-width: $locationWidht
+	width: $locationWidht
+	&__header
+		display: flex
+		text-align: center
+		cursor: pointer
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+	&_icon
+		@include size(16px)
+		fill: $base-text-color
+
+	&__current
+		display: flex
+		text-align: center
+		&:after
+			content: ''
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 4px 4.5px 0 4.5px
+			border-color: #000000 transparent transparent transparent
+			margin-left: 10%
+			margin-top: 7.5px
+			cursor: pointer

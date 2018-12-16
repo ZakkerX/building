@@ -20,21 +20,23 @@
     "gulp-filter": "^5.1.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
-    "gulp-plumber": "^1.2.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-pug": "^4.0.1",
     "gulp-pug-inheritance": "^0.2.1",
     "gulp-rename": "1.4.0",
     "gulp-replace": "1.0.0",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-svg-sprite": "^1.4.0",
+    "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.1.0",
     "gulp-uglify": "^3.0.1",
-    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^6.0.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.0",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9"
-  }
+  },
+  "repository": "https://github.com/FARCER/Start-template-gulp-4-pug-sass.git"
 }

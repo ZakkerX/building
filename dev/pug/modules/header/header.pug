@@ -1,1 +1,25 @@
 header.header
+	.header-top
+		.container
+			.location.header-top__lacation
+				.location__header
+					+icon('maps-and-flags', 'location_icon')
+					span.location__current Бердск
+				.location__body
+			include ../navigation/main-nav
+			.user-nav.header-top__user-nav
+				a(href='#').user-nav__link Войти
+	.header-main
+		.container
+			.logo
+				img(src='static/images/general/drawing.svg' alt='alt').logo_img
+				span.logo__text Продажа стройматериалов
+			include ../navigation/catalog-nav
+			.search.header-main__search
+				input(type='search' placeholder='Артикул или название товара').input-field.input-field--size-samll
+				+icon('search', 'search__icon')
+				.order-callback.header-main__order-callback
+					span.order-callback__description Звоните круглосуточно
+					a(href='tel:+88005553535').order-callback__phone +8 800 555 35 35
+					a(href='#').order-callback__link Заказать звонок
+				include ../basket/basket-prev
