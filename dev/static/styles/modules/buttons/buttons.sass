@@ -1,7 +1,19 @@
 .btn
-	cursor: 
+	cursor: pointer
 	border: 0
 	background-color: $mainActionColor
 	padding: 10px 20px
 	font-size: 20px
 	border-radius: 4px
+	align-items: center
+	display: flex
+	line-height: 20px
+	& > *
+		&:not(:last-child)
+			margin-right: 10px
+	&__icon
+		@include size(25px)
+	&.btn
+		&--fill
+			width: 100%
+			justify-content: center
