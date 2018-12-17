@@ -54,3 +54,24 @@
 	font-size: 14px
 	margin-left: 5px
 
+.slider-nav
+	cursor: pointer
+	opacity: 0.5
+	transition: .5s ease
+	position: absolute
+	top: 50%
+	transform: translate(-50%)
+	&__icon
+		@include size(30px)
+		fill: $base-text-color
+	&:hover
+		opacity: 1
+	&.slider-nav
+		&--prev
+			left: -15px
+		&--next
+			right: -50px
+	&.slick-disabled
+		cursor: default
+		&:hover
+			opacity: 0.5
