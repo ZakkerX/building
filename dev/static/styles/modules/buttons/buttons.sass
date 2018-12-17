@@ -8,6 +8,8 @@
 	align-items: center
 	display: flex
 	line-height: 20px
+	&:hover
+		background-color: #f0de01
 	& > *
 		&:not(:last-child)
 			margin-right: 10px
@@ -17,3 +19,5 @@
 		&--fill
 			width: 100%
 			justify-content: center
+		&--disabled
+			opacity: 0.5
