@@ -1,1 +1,65 @@
 footer.footer
+	.footer-top
+		.container
+			.footer-callback
+				+icon('wiki','footer-callback__icon')
+				.order-callback.footer-callback__order-callback
+					span.order-callback__description Звоните круглосуточно
+					a(href='tel:+88005553535').order-callback__phone +8 800 555 35 35
+					a(href='#').order-callback__link.link-white.link-underline Заказать звонок
+			.footer-main
+				.footer__col
+					span.footer__title О нас
+					ul.footer-nav__list
+						+footerNavLink('#','Оплата и доставка','')
+						+footerNavLink('#','Гарантия','')
+						+footerNavLink('#','Услуги по обработке металла','')
+						+footerNavLink('#','Компания','')
+						+footerNavLink('#','Контакты',' связь с директором')
+				.footer__col
+					span.footer__title Каталог
+					ul.footer-nav__list
+						+footerNavLink('#','Все для кровли','')
+						+footerNavLink('#','Фасад','')
+						+footerNavLink('#','Профнастил','')
+						+footerNavLink('#','Листовой прокат','')
+						+footerNavLink('#','Рулонная сталь','')
+				.footer__col
+					.footer__block
+						span.footer__title Принимаем к оплате
+						.payment-types
+							ul.payment-types__list
+								li.payment-types__item
+									+icon('visa','payment-types__icon')
+								li.payment-types__item
+									+icon('mastercard','payment-types__icon')
+								li.payment-types__item
+									+icon('mir','payment-types__icon')
+							a(href="#").link-underline.link-yellow Оплата заказа оглайн
+					.footer__block
+						span Акции и спецпредложения	
+				.footer__col
+					.footer__block
+						span.footer__title Контакты
+						.footer-contacts
+							+icon('maps-and-flags','footer-contacts__icon')
+							span.footer-contacts__title Офис
+							p.footer-contacts__text 234544, Москва, ул.Улица, д.228, стр. 0 
+								a(href="#").footer-contacts__link на карте
+
+					.footer__block
+						.footer-contacts
+							+icon('maps-and-flags','footer-contacts__icon')
+							span.footer-contacts__title Производство и склад
+							p.footer-contacts__text 234544, Москва, ул.Улица, д.228, стр. 0 
+								a(href="#").footer-contacts__link на карте
+
+	.footer-bottom
+		.container
+			.footer-bottom__line
+				span.copyright &copy 2018
+				a(href="#").footer-bottom__link Политика конфенциальности
+				a(href="#").footer-bottom__link Карта сайта
+			.footer-bottom__line
+				p.footer-bottom__text Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты.
+				p.footer-bottom__text Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные.

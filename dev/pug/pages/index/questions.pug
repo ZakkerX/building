@@ -1,0 +1,15 @@
+section.s-questions
+	.container
+		.questions
+			.upgrade
+				.upgrade__icon-wraper
+					+icon('info','upgrade__icon')
+				a(href="#").link.link-underline Что можно улучшить на этой странице?
+			.ask-your-question
+				span.ask-your-question__title Задайте вопрос
+				ul.ask-your-question__list
+					+askYourQuestion('message','Messenger','')
+					+askYourQuestion('telegram','Telegram','')
+					+askYourQuestion('vk','Вконтакте','')
+
+

@@ -2,6 +2,7 @@
 @import 'banner'
 @import 'section'
 @import 'sales-leaders'
+@import 'links'
 
 .logo
 	font-size: 12px
@@ -17,7 +18,7 @@
 	align-items: center
 	& > *
 		&:not(:last-child)
-			margin-right: 60px
+			margin-right: 10px
 	&__icon
 		@include size(22px)
 		fill: $white
@@ -37,9 +38,9 @@
 		line-height: 1.5
 		white-space: nowrap
 	&__link 
-		color: $white
 		font-size: 14px
-		text-decoration: underline
+		font-weight: bold
+
 
 .title
 	&-page 
@@ -75,3 +76,46 @@
 		cursor: default
 		&:hover
 			opacity: 0.5
+
+.upgrade
+	align-items: center
+	display: flex
+	font: 14px
+	& > *
+		&:not(:last-child)
+			margin-right: 10px
+	&__icon
+		fill: $white
+		@include size(10px)
+		&-wraper
+			@include size(16px)
+			border-radius: 50%
+			background-color: $text-info-color
+			display: flex
+			align-items: center
+			justify-content: center
+.questions
+	align-items: center
+	display: flex
+	justify-content: space-between
+.ask-your-question
+	align-items: center
+	display: flex
+	& > *
+		&:not(:last-child)
+			margin-right: 30px
+	&__list
+		align-items: center
+		display: flex
+		& > *
+			&:not(:last-child)
+				margin-right: 20px
+	&__link
+		align-items: center
+		display: flex
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+	&__icon
+		@include size(24px)
+		fill: $base-text-color

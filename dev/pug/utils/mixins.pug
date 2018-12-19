@@ -5,3 +5,21 @@ mixin icon(name,mod)
 	else
 		svg(class="svg-sprite-icon icon-" + name)
 			use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
+		
+mixin askYourQuestion(icon,text,link)
+	li.ask-your-question__item
+		a(href=link).ask-your-question__link
+			+icon(icon,'ask-your-question__icon')
+			span.ask-your-question__text=text
+
+mixin footerNavLink(link,text,descr)
+	li.footer-nav-item
+		a(href=link).footer-nav__link=text
+		if(descr)
+			span.footer-nav__descr=descr
+
+mixin catalogSubnavItem(link,text,count)
+	li.catalog-subnav__item
+		a(href=link).catalog-subnav__link
+			span.catalog-subnav__text=text
+			span.count-text=count
