@@ -1,13 +1,14 @@
 .btn
 	cursor: pointer
-	border: 0
+	border: 2px solid transparent
 	background-color: $mainActionColor
-	padding: 10px 20px
+	padding: 8px 20px
 	font-size: 20px
 	border-radius: 4px
 	align-items: center
 	display: flex
 	line-height: 20px
+	white-space: nowrap
 	&:hover
 		background-color: #f0de01
 	& > *
@@ -21,3 +22,15 @@
 			justify-content: center
 		&--disabled
 			opacity: 0.5
+		&--bg
+			&-green
+				background-color: $button-green-color
+				color: $white
+		&--border
+			&-green 
+				border-color: $button-green-color
+				background-color: $white
+				color: $button-green-color
+		&--size
+			&-s
+				padding: 3px 15px

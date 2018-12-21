@@ -68,7 +68,7 @@
 			overflow: hidden
 		&:hover
 			.catalog-subnav
-				display: flex
+				display: block
 
 
 .catalog-subnav
@@ -82,11 +82,12 @@
 	position: absolute
 	padding: 15px 20px 0
 	width: 670px
-	overflow: auto
 	border-radius: 0 4px 4px 0
-	& > *
-		&:not(:last-child)
-			margin-right: 30px
+	&__inner
+		display: flex
+		& > *
+			&:not(:last-child)
+				margin-right: 30px
 	&__col
 		flex: 1
 		& > *

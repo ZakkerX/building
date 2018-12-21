@@ -52,10 +52,30 @@ $(document).ready(function () {
 		});
 	};
 
+	var locationChoose = function(){
+		$(document).on('click','.location-question__btn', function(){
+			var answer = $(this).data('location');
+			$(this).closest('.location-question').hide();
+			if(answer === 'no'){
+				$(this).closest('.location__body').addClass('is-location-choose');
+			}
+		})
+		
+		$(document).on('click','.location-choose__item', function(){
+			$(this).closest('.location__body').removeClass('is-location-choose');
+		})
+
+		$(document).on('click','.location__header', function(){
+			$(this).siblings('.location__body').addClass('is-location-choose');
+		})
+
+	};
+
 	popularCategoriesSlider();
 	sandwich();
 	productPrevSlider();
 	catelogNavHover();
+	locationChoose();
 });
 
 var popularCategoriesSlider = function(){

@@ -1,11 +1,7 @@
 header.header
 	.header-top
 		.container
-			.location.header-top__lacation
-				.location__header
-					+icon('maps-and-flags', 'location_icon')
-					span.location__current Бердск
-				.location__body
+			include location
 			include ../navigation/main-nav
 			.user-nav.header-top__user-nav
 				a(href='#').user-nav__link.link-green Войти
@@ -16,7 +12,7 @@ header.header
 				span.logo__text Продажа стройматериалов
 			include ../navigation/catalog-nav
 			.search.header-main__search
-				input(type='search' placeholder='Артикул или название товара').input-field.input-field--size-samll
+				input(type='search' placeholder='Артикул или название товара').input-field.input-field--size-s
 				+icon('search', 'search__icon')
 				.order-callback.header-main__order-callback
 					span.order-callback__description Звоните круглосуточно
