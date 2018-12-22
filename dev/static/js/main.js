@@ -78,7 +78,51 @@ $(document).ready(function () {
 		$(document).on('click', '.popup__close', function(){
 			$.magnificPopup.close();
 		})
+		
 	}
+	
+	$('.js-popup-link ').on('click', function () {
+		$('.hide-on-success').show().siblings('.show-on-success').hide();
+
+	});
+
+	var formValidate = function () {
+		$('form').each(function () {
+			$(this).on('submit', function(){
+				$(this).validate( {
+					rules: {
+						name: 'required',
+						phone: 'required',
+						email: 'required',
+						password: 'required',
+						message: 'required'
+					},
+					messages: {
+						name: 'Введите корректное имя',
+						phone: 'Введите корректное номер',
+						email: 'Введите корректное email',
+						password: 'Введите корректное пароль',
+						message: 'Заполните поле'
+					},
+					errorPlacement: function (error, elemtnt) {
+						elemtnt.attr('placeholder', error[0].outerText);
+					}
+				});
+				if ($(this).valid()){
+					var wrap = $(this)[0].closest('.hide-on-success');
+					if (wrap){
+						$(wrap).siblings('.show-on-success').show();
+						$(wrap).hide();
+					}
+				}
+				
+				return false;
+			});
+			
+		});
+		
+	}
+	
 
 	popularCategoriesSlider();
 	sandwich();
@@ -86,6 +130,7 @@ $(document).ready(function () {
 	catelogNavHover();
 	locationChoose();
 	popupLink();
+	formValidate();
 });
 
 var popularCategoriesSlider = function(){

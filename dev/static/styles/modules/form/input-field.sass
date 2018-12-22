@@ -8,6 +8,10 @@
 	width: 100%
 	@include placeholder
 		color: $text-info-color
+	&.error
+		border-color: $warning-color
+		@include placeholder
+			color: $warning-color
 	&.input-field
 		&--size
 			&-s
