@@ -1,0 +1,17 @@
+.file-upload
+	align-items: center
+	display: flex
+	cursor: pointer
+	input[type="file"]
+		display: none
+	&__custom
+		color: #1fa349
+		display: flex
+		align-items: center
+		
+		& > *
+			&:not(:last-child)
+				margin-right: 10px
+	&__icon
+		@include size(18px)
+		fill: #1fa349

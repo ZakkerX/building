@@ -1,0 +1,34 @@
+.form-group
+	align-items: flex-start
+	flex: 1
+	display: flex
+	flex-direction: column
+	
+	&.form-group
+		&--required
+			.form-group
+				&__label
+					position: relative
+					&:after
+						font-size: 20px
+						content: '*'
+						color: $warning-color
+						position: absolute
+						right: -10px
+						top: -10px
+		&--width
+			&-m 
+				max-width: 245px
+	&__label
+		color: $label-text-color
+		text-transform: uppercase
+		font-size: 12px
+		letter-spacing: .65px
+		margin-bottom: 10px
+	&-submit
+		display: flex
+		& > *
+			&:not(:last-child)
+				margin-right: 20px
+
+
