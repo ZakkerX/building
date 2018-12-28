@@ -123,6 +123,25 @@ $(document).ready(function () {
 		
 	}
 	
+	var reviewLine = function(){
+		$(document).on('click', '.review-line__number', function(){
+			var left = $(this).parent().position().left;
+			$(this).parent().siblings().removeClass('review-line__item--active');
+			$(this).parent().addClass('review-line__item--active');
+			$('.review-line').css('width', left - 1);
+		})
+	};
+
+	var contactsPopup = function(){
+		$(document).on('click', '.contacts-popup__toggle', function(){
+			$(this).parent().addClass('contacts-popup--active');
+		});
+		$(document).on('click', '.contacts-popup__close', function(){
+			$(this).closest('.contacts-popup').removeClass('contacts-popup--active');
+			
+		});
+
+	};
 
 	popularCategoriesSlider();
 	sandwich();
@@ -131,6 +150,8 @@ $(document).ready(function () {
 	locationChoose();
 	popupLink();
 	formValidate();
+	reviewLine();
+	contactsPopup();
 });
 
 var popularCategoriesSlider = function(){
@@ -151,3 +172,49 @@ $(window).on('resize', function(){
 	popularCategoriesSlider();
 });
 
+if($('div').is('.contacts-popup__map')){
+	ymaps.ready(function () {
+		var myMapOffice = new ymaps.Map('popup-contacts-office', {
+				center: [55.751574, 37.573856],
+				zoom: 13
+		}, {
+				searchControlProvider: 'yandex#search'
+		}),
+
+		myPlacemark = new ymaps.Placemark(myMapOffice.getCenter(), {
+
+		}, {
+			iconLayout: 'default#image',
+			iconImageHref: 'static/images/general/location-pointer.png',
+			iconImageSize: [50, 50],
+			preset: 'islands#redIcon'
+		});
+
+		myMapOffice.geoObjects.add(myPlacemark);
+		myMapOffice.behaviors.disable('scrollZoom');
+		myMapOffice.controls.remove('typefficControl').remove('searchControl').remove('typeSelector').remove('geolocationControl').remove('fullscreenControl').remove('rulerControl');
+	
+	
+	
+		var myMapStock = new ymaps.Map('popup-contacts-stock', {
+			center: [55.751574, 37.573856],
+			zoom: 13
+	}, {
+			searchControlProvider: 'yandex#search'
+	}),
+
+	myPlacemark2 = new ymaps.Placemark(myMapStock.getCenter(), {
+
+	}, {
+		iconLayout: 'default#image',
+		iconImageHref: 'static/images/general/location-pointer.png',
+		iconImageSize: [80, 80],
+		preset: 'islands#redIcon'
+	});
+
+	myMapStock.geoObjects.add(myPlacemark2);
+	myMapStock.behaviors.disable('scrollZoom');
+	myMapStock.controls.remove('typefficControl').remove('searchControl').remove('typeSelector').remove('geolocationControl').remove('fullscreenControl').remove('rulerControl');
+
+	});
+}

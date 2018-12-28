@@ -37,22 +37,55 @@ footer.footer
 									+icon('mir','payment-types__icon')
 							a(href="#").link-underline.link-yellow Оплата заказа оглайн
 					.footer__block
-						span Акции и спецпредложения	
+						.footer-actions
+							span.footer-actions__title Акции и спецпредложения
+							.action-tooltip
+								+icon('giftbox','action-tooltip__icon')
+								span.action-tooltip__text Мультиварка в подарок до 31 декабря!
 				.footer__col
 					.footer__block
 						span.footer__title Контакты
 						.footer-contacts
 							+icon('maps-and-flags','footer-contacts__icon')
 							span.footer-contacts__title Офис
-							p.footer-contacts__text 234544, Москва, ул.Улица, д.228, стр. 0 
-								a(href="#").footer-contacts__link на карте
+							.footer-contacts__text 234544, Москва, ул.Улица, д.228, стр. 0 
+								.contacts-popup
+									span.contacts-popup__toggle на карте
+									.contacts-popup__body
+										.contacts-popup__map#popup-contacts-office
+										.contacts-popup__info
+											.contacts-popup__close
+												+icon('close','contacts-popup__close-icon')
+											span.contacts-popup__title Центральный офис в Новосибирске
+											span.contacts-popup__text  234544, Москва, ул.Улица, д.228, стр. 0 
+											.contacts-popup__block
+												span.contacts-popup__label Время работы:
+												span.contacts-popup__text пн-пт 9:00-18:00
+											.contacts-popup__qr
+												span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR-код
+												+icon('qr-code','contacts-popup__qr-icon')
 
 					.footer__block
 						.footer-contacts
 							+icon('maps-and-flags','footer-contacts__icon')
 							span.footer-contacts__title Производство и склад
-							p.footer-contacts__text 234544, Москва, ул.Улица, д.228, стр. 0 
-								a(href="#").footer-contacts__link на карте
+							.footer-contacts__text 234544, Москва, ул.Улица, д.228, стр. 0 Москва, ул.Улица, д.228, стр. 0 Москва, ул.Улица, д.228, стр. 0
+								.contacts-popup
+									span.contacts-popup__toggle на карте
+									.contacts-popup__body
+										.contacts-popup__map#popup-contacts-office
+										.contacts-popup__info
+											.contacts-popup__close
+												+icon('close','contacts-popup__close-icon')
+											span.contacts-popup__title Центральный офис в Новосибирске
+											span.contacts-popup__text  234544, Москва, ул.Улица, д.228, стр. 0 
+											.contacts-popup__block
+												span.contacts-popup__label Время работы:
+												span.contacts-popup__text пн-пт 9:00-18:00
+											.contacts-popup__qr
+												span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR-код
+												+icon('qr-code','contacts-popup__qr-icon')
+
 
 	.footer-bottom
 		.container

@@ -1,0 +1,60 @@
+
+.review-line
+	background-color: $mainActionColor
+	position: absolute
+	z-index: 1
+	width: 0
+	height: 5px
+	transition: .3s ease
+	top: 30px
+	left: 1px
+	&__wrapper
+		position: relative
+		padding: 30px 0
+		margin: 0 10px
+	&__inner
+		height: 5px
+		justify-content: space-between
+		display: flex
+		background-color: $input-border-color
+		align-items: flex-end
+	&__item
+		border-left: 1px solid #dedede
+		height: 20px
+		margin-bottom: -5px
+		position: relative
+		&.review-line__item
+			&--active
+				.review-line__number
+					background-color: $mainActionColor
+			&--descr
+				&-right
+					&:before
+						left: auto
+						right: 0
+				&-center
+					&:before
+						left: -50%
+						transform: translateX(-50%)
+				&-right
+		&:before
+			content: attr(data-fast-review)
+			display: block
+			color: $text-info-color
+			font-size: 12px
+			position: absolute
+			top: -20px
+			white-space: nowrap
+
+	&__number
+		position: absolute
+		top: 100%
+		border-radius: 50%
+		font-size: 14px
+		line-height: 24px
+		text-align: center
+		@include size(24px)
+		cursor: pointer
+		left: -12px
+		&:hover
+			background-color: $white

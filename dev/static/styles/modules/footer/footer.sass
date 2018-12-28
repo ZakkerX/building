@@ -9,9 +9,7 @@ footer
 		padding: 30px 0
 		.container
 			& > *
-				margin: 40px 0
-				&:last-child
-					margin-bottom: 0
+				margin: 20px 0
 				&:first-child
 					margin-top: 0
 	&-main
@@ -20,7 +18,6 @@ footer
 			flex: 1
 			&:not(:last-child)
 				margin-right: 20px
-
 	&-bottom
 		background-color: $darkest-bg-color
 		font-size: 12px
@@ -53,11 +50,11 @@ footer
 
 	&__title
 		display: block
-		margin-bottom: 15px
+		margin-bottom: 10px
 		font-weight: bold
 		font-size: 20px
 	&__block
-		margin-bottom: 40px
+		margin-bottom: 35px
 		&:last-child
 			margin-bottom: 0
 
@@ -95,10 +92,12 @@ footer
 			margin-bottom: 10px
 		&__text
 			font-size: 12px
-		&__link
-			color: $white
-			text-decoration: underline
-			margin-left: 5px
+			line-height: 1.3
+		
+	&-actions
+		position: relative
+		&__title
+			font-size: 14px
 
 .payment-types
 	& > *
@@ -113,5 +112,79 @@ footer
 			&:not(:last-child)
 				margin-right: 10px
 	&__icon
-		@include size(60px)
+		@include size(53px)
 		fill: $white
+
+.contacts-popup
+	display: inline-block
+	position: relative
+	&.contacts-popup--active
+		.contacts-popup__body
+			display: flex
+	&__toggle
+		color: $white
+		cursor: pointer
+		margin-left: 5px
+		text-decoration: underline
+	&__body
+		background-color: $white
+		display: none
+		position: absolute
+		bottom: 25px
+		right: -20px
+		color: $base-text-color
+		box-shadow: 0 0 30px 0 rgba(0,0,0,0.2)
+		width: 690px
+		&:after
+			position: absolute
+			right: 20px
+			bottom: -12px
+			content: ''
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 12px 12px 0 12px
+			border-color: #ffffff transparent transparent transparent
+	&__info
+		flex: 0 0 220px
+		max-width: 220px
+		width: 260px
+		padding: 40px 20px
+	&__close
+		@include size(30px)
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		right: 15px
+		top: 15px
+		cursor: pointer
+		opacity: 0.2
+		transition: .2s ease
+		&:hover
+			opacity: 0.7
+		&-icon
+			@include size(16px)
+	&__title
+		font-size: 18px
+		display: block
+		line-height: 1.44
+		margin-bottom: 10px
+	&__text
+		font-size: 14px
+		line-height: 18px
+		margin-bottom: 10px
+		display: block
+	&__block
+		display: flex
+		flex-direction: column
+		bottom: 20px
+	&__label
+		font-size: 14px
+		font-weight: bold
+	&__map
+		flex: 1
+	&__qr
+		&-icon
+			@include size(130px)
+
