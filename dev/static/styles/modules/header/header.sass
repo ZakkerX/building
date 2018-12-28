@@ -8,6 +8,8 @@
 			margin-left: auto
 		&__lacation
 			margin-right: 80px
+			@media screen and (max-width: $tablet-size)
+				margin-right: 20px
 	&-main
 		color: $white
 		background-color: $dark-bg-color
@@ -17,5 +19,26 @@
 			& > *
 				&:not(:last-child)
 					margin-right: 40px
-	&__basket-prev
-		margin-left: auto
+					@media screen and (max-width: $tablet-size)
+						margin-right: 20px
+		&__basket-prev
+			margin-left: auto
+			@media screen and (max-width: $tablet-size)
+				order: 4
+				margin-left: 0
+				margin-right: 30px
+		&__logo
+			@media screen and (max-width: $tablet-size)
+				order: 1
+		&__search
+			@media screen and (max-width: $tablet-size)
+				order: 3
+				margin-right: 25px
+		&__order-callback
+			@media screen and (max-width: $tablet-size)
+				order: 5
+				margin-right: 0
+		&__catalog-nav
+			@media screen and (max-width: $tablet-size)
+				order: 2
+			

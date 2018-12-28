@@ -1,13 +1,35 @@
 .basket-prev
 	display: flex
 	flex-direction: column
+	position: relative
 	&__icon
 		@include size(25px)
 		fill: $white
 		margin-bottom: 7px
+		@media screen and (max-width: $tablet-size)
+			margin-bottom: 0
 	&__count
 		font-size: 14px
 		line-height: 18px
+		@media screen and (max-width: $tablet-size)
+			display: none
 	&__title
 		line-height: 20px
 		margin-bottom: 2px
+		@media screen and (max-width: $tablet-size)
+			display: none
+	&__number
+		position: absolute
+		background-color: $mainActionColor
+		font-size: 12px
+		@include size(24px)
+		border-radius: 50%
+		line-height: 23px
+		text-align: center
+		display: none
+		right: -12px
+		top: -12px
+		color: $base-text-color
+		@media screen and (max-width: $tablet-size)
+			display: block
+		

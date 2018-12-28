@@ -11,12 +11,11 @@ $(document).ready(function () {
 			});
 	};
 
-
 	var popularCategoriesSlider = function(){
 		if($(window).width() < 768){
 			$('.js-categories-prev').slick({
 				slidesToShow: 2,
-				slidesToScroll: 1,
+				slidesToScroll: 1
 			})
 		}
 	};
@@ -36,7 +35,24 @@ $(document).ready(function () {
 			prevArrow: '.slider-nav--prev',
 			nextArrow: '.slider-nav--next',
 			infinite: false,
-			
+			responsive: [
+				{
+					breakpoint: 1020,
+					settings: {
+						slidesToShow: 3,
+						arrows: false,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						arrows: false,
+						dots: true
+					}
+				}
+			]
 		})
 	};
 

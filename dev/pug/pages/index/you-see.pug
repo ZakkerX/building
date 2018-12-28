@@ -5,16 +5,17 @@ section.s-product-slider.s-bg-white
 			.section-header__right
 				span.product-slider__count
 		.products-prev-slider
-			.slider-nav.slider-nav--prev
-				+icon('back','slider-nav__icon')
-			.slider-nav.slider-nav--next
-				+icon('next','slider-nav__icon')
+			.products-navigation
+				.slider-nav.slider-nav--prev
+					+icon('back','slider-nav__icon')
+				.slider-nav.slider-nav--next
+					+icon('next','slider-nav__icon')
 			.js-products-slider
 				include ../../modules/product/prev-1
+				include ../../modules/product/prev-2
+				include ../../modules/product/prev-3
+				include ../../modules/product/prev-4
 				include ../../modules/product/prev-1
-				include ../../modules/product/prev-1
-				include ../../modules/product/prev-1
-				include ../../modules/product/prev-1
-				include ../../modules/product/prev-1
-				include ../../modules/product/prev-1
-				include ../../modules/product/prev-1
+				include ../../modules/product/prev-2
+				include ../../modules/product/prev-3
+				include ../../modules/product/prev-4

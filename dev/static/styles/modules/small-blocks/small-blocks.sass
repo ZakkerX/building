@@ -9,7 +9,7 @@
 	font-size: 12px
 	display: flex
 	flex-direction: column
-	&_img
+	&__img
 		width: 160px
 		img 
 			width: 100%
@@ -24,8 +24,10 @@
 		@include size(22px)
 		fill: $white
 	.input-field
-		flex: 0 0 240px
-		width: 240px
+		flex: 0 0 220px
+		width: 220px
+		@media screen and (max-width: $tablet-size)
+			display: none
 
 .order-callback
 	display: flex
@@ -77,6 +79,28 @@
 		cursor: default
 		&:hover
 			opacity: 0.5
+.slick-dots
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-top: 20px
+	& > *
+		&:not(:last-child)
+			margin-right: 10px
+	.slick-active
+		button
+			background-color: $mainActionColor
+	button
+		background-color: $light-bg-color
+		text-indent: -99999px
+		background-color: $slider-dots
+		@include size(14px)
+		border-radius: 50%
+		display: block
+		padding: 0
+		border: 0
+		transition: .3s ease
+		cursor: pointer
 
 .upgrade
 	align-items: center
@@ -120,3 +144,6 @@
 	&__icon
 		@include size(24px)
 		fill: $base-text-color
+	&__text
+		@media screen and (max-width: $tablet-size)
+			display: none

@@ -4,6 +4,8 @@
 		& > *
 			&:not(:last-child)
 				margin-right: 20px
+				@media screen and (max-width: $tablet-size)
+					margin-right: 12px
 	&__col
 		flex: 1
 
@@ -17,6 +19,10 @@
 	margin-bottom: 20px
 	width: 100%
 	height: 240px
+	@media screen and (max-width: $tablet-size)
+		padding: 10px
+		height: 190px
+		margin-bottom: 12px
 	&:hover
 		border-color: $mainActionColor
 	&__img
@@ -25,18 +31,31 @@
 		justify-content: center
 		height: 140px
 		margin-bottom: 10px
+		@media screen and (max-width: $tablet-size)
+			height: 80px
 		img 
 			max-width: 100%
 			max-height: 140px
+			@media screen and (max-width: $tablet-size)
+				max-height: 80px
 	&__name
 		font-weight: bold
 		line-height: 1.25
 	&.sales-leader--big
 		height: 400px
+		&.sales-leader--big
+			@media screen and (max-width: $tablet-size)
+				height: 270px
 		.sales-leader
 			&__img
 				height: 280px
+				@media screen and (max-width: $tablet-size)
+					height: 160px
 				img
 					max-height: 280px
+					@media screen and (max-width: $tablet-size)
+						height: 160px
 			&__name
 				font-size: 22px
+				@media screen and (max-width: $tablet-size)
+					font-size: 20px

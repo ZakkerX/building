@@ -3,16 +3,32 @@
 	flex-wrap: wrap
 	& > *
 		flex: 1 0 calc(25% - 20px)
-		max-width: 295px
+		max-width: 255px
 		margin-right: 20px
 		margin-bottom: 30px
 		width: calc(25% - 20px)
+		@media screen and (max-width: $tablet-size)
+			&:nth-child(3n+3)
+				margin-right: 0
 		&:nth-child(4n+4)
 			margin-right: 0
+			@media screen and (max-width: $tablet-size)
+				margin-right: 25px
+
+		@media screen and (max-width: $tablet-size)
+			margin-right: 25px
+			margin-bottom: 25px
+			flex: 1 0 calc(33% - 25px)
+			max-width: 33%
+			width: calc(33% - 25px)
+
 .category-prev
 	background-color: $white
 	border-radius: 4px
 	overflow: hidden
+	&.category-prev--tablet-hide
+		@media screen and (max-width: $tablet-size)
+			display: none
 	&__img
 		background-repeat: no-repeat
 		background-position: center

@@ -20,6 +20,9 @@
 		top: calc(100% - 5px)
 		position: absolute
 		color: $base-text-color
+		@media screen and (max-width: $tablet-size)
+			left: 20px
+			max-width: 728px
 		&:before
 			position: absolute
 			content: ''
@@ -30,6 +33,9 @@
 			border-color: transparent transparent $white transparent 
 			left: 201.5px
 			top: -9px
+			@media screen and (max-width: $tablet-size)
+				left: 220px
+
 	&__list
 		width: 255px
 		position: relative
@@ -83,6 +89,8 @@
 	padding: 15px 20px 0
 	width: 670px
 	border-radius: 0 4px 4px 0
+	@media screen and (max-width: $tablet-size)
+		width: 474px
 	&__inner
 		display: flex
 		& > *

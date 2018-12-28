@@ -1,10 +1,17 @@
 .product-prev-line
 	display: flex
+
 .product-prev
+	max-width: 275px
+	@media screen and (max-width: $tablet-size)
+		max-width: 33%
+	&:nth-child(4)
+		@media screen and (max-width: $tablet-size)
+			display: none
 	border: 2px solid transparent
 	border-radius: 4px
 	transition: all .3s ease
-	max-width: 275px
+
 	&:hover
 		border-color: $mainActionColor
 		box-shadow: 0 0 30px 0 rgba(0,0,0, .1)
@@ -55,17 +62,41 @@
 	&__title
 		margin-bottom: 20px
 		height: 55px
+		@media screen and (max-width: $tablet-size)
+			height: 75px
 	&__info
 		font-size: 14px
 		display: flex
 		margin-bottom: 15px
 		align-items: flex-end
+		@media screen and (max-width: $tablet-size)
+			flex-direction: column
+			align-items: flex-start
+			flex: 0 0 33%
+			width: 33%
+			max-width: 33%
+		&.product-prev__info--wide
+			@media screen and (max-width: $tablet-size)
+				flex-direction: column
+				align-items: flex-start
+				flex: 1
+				max-width: 100%
 		& > *
 			&:not(:last-child)
 				margin-right: 10px
+				@media screen and (max-width: $tablet-size)
+					margin-right: 0
+					margin-bottom: 10px
+		&-wrapper
+			@media screen and (max-width: $tablet-size)
+				display: flex
+				& > *
+					&:not(:last-child)
+						@media screen and (max-width: $tablet-size)
+							margin-right: 5px
 		&-label
 			text-transform: uppercase
-			font-size: 12px
+			font-size: 11.7px
 			color: #1fa349
 	&__price
 		display: flex

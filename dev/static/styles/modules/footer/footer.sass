@@ -18,6 +18,10 @@ footer
 			flex: 1
 			&:not(:last-child)
 				margin-right: 20px
+			&.footer-nav
+				flex: 2
+				@media screen and (max-width: $tablet-size)
+					flex: 1
 	&-bottom
 		background-color: $darkest-bg-color
 		font-size: 12px
@@ -59,6 +63,18 @@ footer
 			margin-bottom: 0
 
 	&-nav
+		display: flex
+		@media screen and (max-width: $tablet-size)
+			display: flex
+			flex-direction: column
+		& > *
+			flex: 1
+			&:not(:last-child)
+				margin-right: 20px
+				@media screen and (max-width: $tablet-size)
+					margin-right: 0
+					margin-bottom: 30px
+
 		&__list
 			& > *
 				margin: 10px 0
@@ -135,6 +151,9 @@ footer
 		color: $base-text-color
 		box-shadow: 0 0 30px 0 rgba(0,0,0,0.2)
 		width: 690px
+		@media screen and (max-width: $tablet-size)
+			right: -54px
+			bottom: 40px
 		&:after
 			position: absolute
 			right: 20px
@@ -145,6 +164,8 @@ footer
 			border-style: solid
 			border-width: 12px 12px 0 12px
 			border-color: #ffffff transparent transparent transparent
+			@media screen and (max-width: $tablet-size)
+				right: 100px
 	&__info
 		flex: 0 0 220px
 		max-width: 220px
