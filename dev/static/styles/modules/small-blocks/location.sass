@@ -12,7 +12,7 @@
 		& > *
 			&:not(:last-child)
 				margin-right: 10px
-	&_icon
+	&__icon
 		@include size(16px)
 		fill: $base-text-color
 		flex-shrink: 0
@@ -39,8 +39,16 @@
 			right: 0
 	&__body
 		&.is-location-choose
+			@media screen and (max-width: $phone-size)
+				background-color: rgba(#003333, 0.3)
+				position: fixed
+				bottom: 0
+				left: 0
+				right: 0
+				top: 0
+				z-index: 3
 			.location-choose
-				display: block
+				display: flex
 	&-question
 		border-radius: 4px
 		background-color: $white
@@ -52,9 +60,23 @@
 		left: 0
 		top: calc(100% + 10px)
 		box-shadow: 0 0 5px 0 rgba(159, 197, 178, 0.5)
+		@media screen and (max-width: $tablet-size)
+			max-width: 728px
+		@media screen and (max-width: $phone-size)
+			position: fixed
+			bottom: 0
+			max-width: 100%
+			right: 0
+			top: auto
+			border: 2px solid $mainActionColor
+			padding: 10px 20px 20px
+			flex-direction: column
 		& > *
 			&:not(:last-child)
 				margin-right: 15px
+				@media screen and (max-width: $phone-size)
+					margin-right: 0
+					margin-bottom: 10px
 		&:before
 			position: absolute
 			content: ''
@@ -65,6 +87,8 @@
 			border-color: transparent transparent $white transparent 
 			left: 50px
 			top: -9px
+			@media screen and (max-width: $phone-size)
+				display: none
 		&__buttons
 			align-items: center
 			display: flex
@@ -75,6 +99,11 @@
 			font-size: 18px
 			line-height: 1.44
 			white-space: nowrap
+			@media screen and (max-width: $tablet-size)
+				text-overflow: ellipsis
+				overflow: hidden
+				display: block
+
 	&-choose
 		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2)
 		border: 2px solid $mainActionColor
@@ -83,9 +112,15 @@
 		top: 10px
 		left: 20px
 		background-color: $white
+		flex-direction: column
 		z-index: 1
 		width: 210px
 		display: none
+		@media screen and (max-width: $phone-size)
+			width: auto
+			top: 60px
+			right: 20px
+			bottom: 30px
 		&:hover
 			border-bottom: 2px solid $mainActionColor
 		&__item
@@ -102,6 +137,8 @@
 			max-height: 240px
 			display: flex
 			flex-direction: column
+			@media screen and (max-width: $phone-size)
+				max-height: 100%
 			&:after, &:before
 				height: 30px
 				content: ''
@@ -119,4 +156,28 @@
 			overflow: auto
 			padding: 15px 0
 			height: 100%
+		&__close
+			display: none
+			@include size(30px)
+			align-items: center
+			justify-content: center
+			cursor: pointer
+			position: absolute
+			right: 0
+			top: -40px
+			@media screen and (max-width: $phone-size)
+				display: flex
+			&-icon
+			@include size(16px)
+			fill: $mainActionColor
 
+	&-mobile 
+		.location
+			&__icon
+				fill: $link-color
+			&__item
+				color: $base-text-color !important
+			&__current
+				color: $link-color
+				&:after
+					display: none

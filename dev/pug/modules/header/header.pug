@@ -7,15 +7,17 @@ header.header
 				a(href='#').user-nav__link.link-green Войти
 	.header-main
 		.container
+			include ../navigation/mobile-nav
 			.logo.header-main__logo
 				img(src='static/images/general/drawing.svg' alt='alt').logo__img
 				span.logo__text Продажа стройматериалов
 			include ../navigation/catalog-nav
-			.search.header-main__search
-				input(type='search' placeholder='Артикул или название товара').input-field.input-field--size-s
-				+icon('search', 'search__icon')
-				.order-callback.header-main__order-callback
-					span.order-callback__description Звоните круглосуточно
-					a(href='tel:+88005553535').order-callback__phone +8 800 555 35 35
-					a(href='#').order-callback__link.link-white.link-underline Заказать звонок
-				include ../basket/basket-prev
+			.header-actions
+				.search.header-main__search
+					input(type='search' placeholder='Артикул или название товара').input-field.input-field--size-s
+					+icon('search', 'search__icon')
+					.order-callback.header-main__order-callback
+						span.order-callback__description Звоните круглосуточно
+						a(href='tel:+88005553535').order-callback__phone +8 800 555 35 35
+						a(href='#').order-callback__link.link-white.link-underline Заказать звонок
+					include ../basket/basket-prev

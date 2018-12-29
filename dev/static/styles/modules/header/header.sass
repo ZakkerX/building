@@ -4,6 +4,8 @@
 		align-items: center
 	&-top
 		padding: 12px 0
+		@media screen and (max-width: $phone-size)
+			display: none
 		&__user-nav
 			margin-left: auto
 		&__lacation
@@ -14,8 +16,11 @@
 		color: $white
 		background-color: $dark-bg-color
 		padding: 20px 0
+		@media screen and (max-width: $phone-size)
+			padding: 13px 0
 		.container
 			position: relative
+			//justify-content: center
 			& > *
 				&:not(:last-child)
 					margin-right: 40px
@@ -24,21 +29,33 @@
 		&__basket-prev
 			margin-left: auto
 			@media screen and (max-width: $tablet-size)
-				order: 4
+				order: 2
 				margin-left: 0
 				margin-right: 30px
 		&__logo
-			@media screen and (max-width: $tablet-size)
-				order: 1
+			@media screen and (max-width: $phone-size)
+				display: none !important
 		&__search
 			@media screen and (max-width: $tablet-size)
-				order: 3
-				margin-right: 25px
+				order: 1
 		&__order-callback
 			@media screen and (max-width: $tablet-size)
-				order: 5
-				margin-right: 0
-		&__catalog-nav
-			@media screen and (max-width: $tablet-size)
-				order: 2
-			
+				order: 3
+				margin-right: 0 !important
+			@media screen and (max-width: $phone-size)
+				display: none !important
+
+	&-actions
+		display: flex
+		align-items: center
+		@media screen and (max-width: $tablet-size)
+			order: 3
+		@media screen and (max-width: $phone-size)
+			margin-left: auto
+		& > *
+			&:not(:last-child)
+				margin-right: 40px
+				@media screen and (max-width: $tablet-size)
+					margin-right: 20px
+				@media screen and (max-width: $phone-size)
+					margin-right: 15px

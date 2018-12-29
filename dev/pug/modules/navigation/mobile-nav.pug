@@ -1,0 +1,31 @@
+.mobile-nav__wrapper
+	.sandwich
+		.sandwich__line.sandwich__line--top
+		.sandwich__line.sandwich__line--middle
+		.sandwich__line.sandwich__line--bottom
+	.mobile-nav__content
+		.mobile-nav__main
+			ul.mobile-nav__list
+				li.mobile-nav__item
+					a(href="#").mobile-nav__link Оплада и доставка
+				li.mobile-nav__item
+					a(href="#").mobile-nav__link Гарантия
+				li.mobile-nav__item
+					a(href="#").mobile-nav__link Услуги
+				li.mobile-nav__item
+					a(href="#").mobile-nav__link Компания
+				li.mobile-nav__item
+					a(href="#").mobile-nav__link Контакты
+			ul.mobile-user-nav__list
+				li.mobile-user-nav__item
+					a(href="#").mobile-user-nav__link Войти
+			.location-mobile
+				.location__header
+					+icon('maps-and-flags', 'location__icon')
+					span.location__current Новосибирск
+				
+		.mobile-nav__callback
+			.order-callback.mobile-nav__order-callback
+				span.order-callback__description Звоните круглосуточно
+				a(href='tel:+88005553535').order-callback__phone +8 800 555 35 35
+				a(href='#').order-callback__link.link-white.link-underline Заказать звонок
